@@ -281,13 +281,13 @@ env:
 
 #### contains
 
-`contains( search, item )`
+`contains( item, search )`
 
 Returns `true` if `search` contains `item`. If `search` is an array, this function returns `true` if the `item` is an element in the array. If `search` is a string, this function returns `true` if the `item` is a substring of `search`. This function is not case sensitive. Casts values to a string.
 
 ##### Example using an array
 
-`contains(github.event.issue.labels.*.name, 'bug')`
+`contains( 'bug', github.event.issue.labels.*.name)`
 
 ##### Example using a string
 
